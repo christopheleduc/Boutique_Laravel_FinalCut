@@ -67,6 +67,7 @@ Route::get('/historique/{order}', 'BasketController@story_details')->middleware(
 /* Contacts !!! a finir !!! */
 //Route::get('/contacts', 'PageController@contacts');
 //Route::get('/contacts/{id}', 'PageController@contact');
+Route::get('contacts/equipe', 'PageController@contacts')->name('equipe');
 Route::get('contacts/{id}', 'PageController@contact')->name('contacts');
 
 

@@ -28,20 +28,23 @@ global $board;
 $board = [
     [
         'name' => 'Eric',
-        'link' => '/contacts/eric',
-        'image'
+        'link' => '/contacts/Eric',
+        'image' => 'eric_vignette.png'
     ],
     [
         'name' => 'Melanie',
-        'link' => '/contacts/mel'
+        'link' => '/contacts/Mel',
+        'image' => 'melanie_vignette.png'
     ],
     [
         'name' => 'Christophe',
-        'link' => '/contacts/christophe'
+        'link' => '/contacts/Christophe',
+        'image' => 'christophe_vignette.png'
     ],
     [
         'name' => 'Cedric',
-        'link' => '/contacts/cedric'
+        'link' => '/contacts/Cedric',
+        'image' => 'cedric_vignette.png'
     ]
 ];
 ?>

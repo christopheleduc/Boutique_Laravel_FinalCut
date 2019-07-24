@@ -20,19 +20,19 @@
 
 @section('contact')
     @foreach($contacts as $contact)
-        
+
         <div class="col-md-3">
             <div class="card mb-4 box-shadow">
                 {{-- <img class="card-img-top" data-src="holder.js/100px25?theme=thumb&bg=55595c&fg=eceeef&text={{ $contact['link'] }}" alt="Card image cap"> --}}
                 <img class="card-img-top" data-src="holder.js/100px25?theme=thumb&bg=55595c&fg=eceeef&text={{ $contact['name'] }}" alt="Card image cap">
                 {{-- <img class="card-img-top" src="{{ asset('images/' . $id)}}" alt="Card image cap"> --}}
-                <img class="card-img-top" src="{{ asset('images/' . 'melanie_vignette.png')}}" alt="Card image cap">
+                <img class="card-img-top" src="{{ asset('images/' .  $contact['image'])}}" alt="Card image cap">
                 <div class="card-body">
-                    
+
                     <p class="card-text">{{ $contact['name'] }}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <a href="products/{{ $id }}" class="btn btn-sm btn-outline-secondary">Profil</a>
+                            <a href="{{ $contact['link'] }}" class="btn btn-sm btn-outline-secondary">Profil</a>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Contact</button>
                         </div>
                         {{-- <small class="text-muted">{{ $id }} €</small> --}}

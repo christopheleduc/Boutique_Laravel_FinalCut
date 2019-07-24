@@ -13,18 +13,22 @@ class PageController extends Controller
         $Products = Product::all();
         return view('welcome', ['Products' => $Products]);
     }
+
     public function contact($id)
     {
         global $board;
-        return view("contacts/contact", [
+        //dd($board);
+        return view("contacts/equipe", [
             'contacts' => $board,
             'id' => $id
         ]);
     }
+
     public function contacts()
     {
         global $board;
-        return view('contacts.ListContact', [
+        //dd($board);
+        return view('contacts.equipe', [
             'contacts' => $board
         ]);
     }

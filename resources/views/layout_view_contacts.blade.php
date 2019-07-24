@@ -79,8 +79,8 @@
             <h1 class="jumbotron-heading">Notre Boutique Illot</h1>
             <p class="lead text-muted">Notre équipe de super Hackers est heureuse de vous accueuillir.<br> N'hésitez pas à nous contacter si vous avez des suggestions.</p>
             <p>
-                <a href="#" class="btn btn-primary my-2">Parcourir le catalogue</a>
-                <a href="#" class="btn btn-secondary my-2">Créer un compte</a>
+                <a href="/products" class="btn btn-primary my-2">Parcourir le catalogue</a>
+                <a href="/home" class="btn btn-secondary my-2">Créer un compte</a>
             </p>
 
             <p>
