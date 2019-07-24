@@ -1,7 +1,7 @@
-@extends('historique')
+@extends('storyDetails')
 @section('content')
-    @php($i = 1)
-    @foreach($orders as $order)
+    {{-- @php($i = 1) --}}
+    {{-- @foreach($orders as $order) --}}
         @foreach($order->product as $prod)
 {{--            @dd($prod->pivot->quantity)--}}
             <div class="container">
@@ -16,8 +16,7 @@
                     </thead>
                     <tbody>
                     <tr>
-                        {{-- <th scope="row">{{ $prod->pivot->orders_id }}</th> --}}
-                        <th scope="row"><a href="/historique/{{ $prod->pivot->orders_id }}">{{ $prod->pivot->orders_id }}</a></th>
+                        <th scope="row">{{ $prod->pivot->orders_id }}</th>
                         <td>{{ $order->Users->firstName }}</td>
                         <td><a href="/product/{{ $prod->pivot->products_id }}">{{ $prod->pivot->products_id }}</a></td>
                         <td>{{ $prod->pivot->quantity }}</td>
@@ -25,7 +24,7 @@
                     </tbody>
                 </table>
             </div>
-            @php($i++)
+            {{-- @php($i++) --}}
         @endforeach
-    @endforeach
+    {{-- @endforeach --}}
 @endsection

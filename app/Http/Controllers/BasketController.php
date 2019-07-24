@@ -52,7 +52,7 @@ class BasketController extends Controller
                 $total = $total + ($data[$i]['price']*$id['qte'])/100;
                 $i++;
             }
-            
+
             return view('orders.basket', ['data' => $data, 'qtes' => $qte, 'total' => $total]);
         }
         return view('orders.basket');
@@ -107,11 +107,11 @@ class BasketController extends Controller
         Auth::check();
         $id = Auth::user()->id;
         $com = Orders::find($id['products_id']);
-        dd($com);
+        //dd($com);
         $commande = Orders_product::find($com['products_id']);
-        dd($orders);
+        //dd($orders);
         $orders = Orders::all(); //->Auth::user()->id;
-        dd($orders);
+        //dd($orders);
         return view('user_commandes', ['orders' => $orders]);
     }
 
@@ -120,23 +120,24 @@ class BasketController extends Controller
         Auth::check();
         $id = Auth::user()->id;
         //dump($id);
-        //$com = Orders::find($id['users_id']);
-        //$com = DB::table('orders')->where('users_id', $id)->get();
         //dump($com);
-        // $orders = Orders::all();
         $orders = Orders::whereUsers_id($id)->get();
-        //$orders = $com;
         //dd($orders);
         return view('admin/basketstory', ['orders' => $orders]);
-        // Auth::check();
-        // $id = Auth::user()->id;
-        // $com = Orders::find($id);
-        // //dd($com);
-        // $commande = Orders_product::find($com['products_id']);
-        // // // dd($orders);
-        // // // $orders = Orders::all()->Auth::user()->id;
-        // // // dd($orders);
-        // return view('historique');
-        // //return view('user_commandes', ['orders' => $orders]);
+    }
+
+    public function story_details(Orders $order)
+    {
+        //dd($order);
+        if (Auth::user()->id != $order->users_id && Auth::user()->isAdmin != 1)
+        {
+            return redirect()->route('historique')->with('error','You must be logged to validate !');
+        } elseif (Auth::user()->isAdmin === 1) {
+            return view('storycom', ['order' => $order]);
+        };
+        //dump($id);
+        //dump($com);
+        //dd($order);
+        return view('storycom', ['order' => $order]);
     }
 }

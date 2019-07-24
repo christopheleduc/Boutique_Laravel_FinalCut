@@ -16,7 +16,8 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <th scope="row">{{ $prod->pivot->orders_id }}</th>
+                        {{-- <th scope="row">{{ $prod->pivot->orders_id }}</th> --}}
+                        <th scope="row"><a href="/historique/{{ $prod->pivot->orders_id }}">{{ $prod->pivot->orders_id }}</a></th>
                         <td>{{ $order->Users->firstName }}</td>
                         <td> <a href="/product/{{ $prod->pivot->products_id }}">
                         {{ $prod->pivot->products_id }}

@@ -19,7 +19,7 @@ Route::group(['prefix'=>'admin', 'middleware' => 'admin'], function ()
     // Route::get('/{id}', 'AdminController@create');
     Route::get('/create', 'AdminController@create');
     Route::resource('/product', 'AdminController');
-    
+
     Route::get('/orders', 'BasketController@admin');
 
 //* Routes Category !!! Fini: Ne surtout pas effacer !!! *//
@@ -61,7 +61,8 @@ Route::get('orders/commandes', 'BasketController@show_com');
 //Historique
 
 //Route::get('orders/basketstory', 'BasketController@index');
-Route::get('/historique', 'BasketController@show_story');
+Route::get('/historique', 'BasketController@show_story')->name('historique')->middleware('auth');
+Route::get('/historique/{order}', 'BasketController@story_details')->middleware('auth');
 
 /* Contacts !!! a finir !!! */
 //Route::get('/contacts', 'PageController@contacts');
