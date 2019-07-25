@@ -20,7 +20,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contacts</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="/contacts/ListConcat">L'equipe</a>
+                        <a class="dropdown-item" href="{{ route('equipe') }}">L'equipe</a>
                         <a class="dropdown-item" href="/contacts/Christophe">Christophe</a>
                         <a class="dropdown-item" href="/contacts/Mel">Mélanie</a>
                         <a class="dropdown-item" href="/contacts/Cedric">Cédric</a>
