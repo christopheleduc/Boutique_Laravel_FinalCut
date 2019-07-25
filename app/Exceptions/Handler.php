@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -49,6 +50,8 @@ class Handler extends ExceptionHandler
     {
         if ($exception instanceof  ModelNotFoundException) {
             return redirect()->route('historique')->with('error','You must be logged to validate !');
+        } elseif ($exception instanceof  NotFoundHttpException) {
+            return redirect()->route('orders')->with('error','No ressources here you can access !');
         }
         return parent::render($request, $exception);
     }

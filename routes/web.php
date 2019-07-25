@@ -20,7 +20,7 @@ Route::group(['prefix'=>'admin', 'middleware' => 'admin'], function ()
     Route::get('/create', 'AdminController@create');
     Route::resource('/product', 'AdminController');
 
-    Route::get('/orders', 'BasketController@admin');
+    Route::get('/orders', 'BasketController@admin')->name('orders');
 
 //* Routes Category !!! Fini: Ne surtout pas effacer !!! *//
     Route::get('/category', 'CategoryController@index');
@@ -44,7 +44,7 @@ Route::get('/', 'PageController@index');
 
 // Produits
 
-Route::get('/products', 'ProductController@index');
+Route::get('/products', 'ProductController@index')->name('products');
 Route::get('/product/{id}', 'ProductController@show');
 
 // Panier
