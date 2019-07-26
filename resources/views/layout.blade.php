@@ -1,11 +1,11 @@
-<!doctype html>
+{{-- <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
+    <meta name="author" content="Christophe LEDUC, Le Campus Numérique in the Alps">
+    <meta name="generator" content="Laravel">
     <title>@yield('MetaTitle')</title>
 
 
@@ -33,17 +33,11 @@
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.3/examples/starter-template/starter-template.css" rel="stylesheet">
 <!-- <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" /> -->
-</head>
+</head> --}}
+            @include('header_01')
 <body>
             @include('nav_bar')
             @include('admin_nav_bar')
-        {{-- </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav> --}}
 
 <main role="main" >
 
@@ -71,12 +65,12 @@
         <div class="alert {{ Session::get('flash_type') }}">
             <h3>{{ Session::get('flash_message') }}</h3>
         </div>
-    
+
     @endif
 
     {{-- <div class="container"> --}}
             {{-- @if ( Session::has('flash_message') )
-        
+
                 <div class="presentation alert {{ Session::get('flash_type') }}">
                     <h3>{{ Session::get('flash_message') }}</h3>
                 </div>
@@ -97,8 +91,10 @@
 
 </main>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            @include('footer_01')
+
+{{-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="{{asset('/js/jquery-slim.min.js')}}"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
 </body>
-</html>
+</html> --}}
