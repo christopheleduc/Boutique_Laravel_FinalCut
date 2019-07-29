@@ -1,39 +1,4 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>@yield('MetaTitle')</title>
-
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="https://getbootstrap.com/docs/4.3/examples/starter-template/starter-template.css" rel="stylesheet">
-<!-- <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" /> -->
-</head>
+    @include('header_01')
 <body>
     @include('nav_bar')
     @include('admin_nav_bar')
@@ -46,7 +11,7 @@
             <p class="lead text-muted">Notre équipe de super Hackers est heureuse de vous accueuillir.<br> N'hésitez pas à nous contacter si vous avez des suggestions.</p>
             <p>
                 <a href="/products" class="btn btn-primary my-2">Parcourir le catalogue</a>
-                <a href="/home" class="btn btn-secondary my-2">Créer un compte</a>
+                <a href="/home" class="btn btn-secondary my-2">Créer un compte / s'identifier</a>
             </p>
 
             <p>
@@ -68,9 +33,4 @@
     </div>
 
 </main>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="{{asset('/js/jquery-slim.min.js')}}"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
-</body>
-</html>
+    @include('footer_01')

@@ -9,6 +9,6 @@
         <ul><input type="text"><label>Description</label></ul>
         <ul> <input type="number"><label>Price</label></ul>
         <ul><input type="text"><label>Url de l'image</label></ul>
-        <button class="btn-primary" type="submit">Ajouter</button>
+        <button class="btn btn-warning" type="submit">Ajouter</button>
 </form>
 @endsection
