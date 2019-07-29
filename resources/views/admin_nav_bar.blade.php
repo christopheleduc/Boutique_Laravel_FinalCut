@@ -22,7 +22,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="{{ route('equipe') }}">L'equipe</a>
                         <a class="dropdown-item" href="/contacts/Christophe">Christophe</a>
-                        <a class="dropdown-item" href="/contacts/Mel">Mélanie</a>
+                        <a class="dropdown-item" href="/contacts/Melanie">Mélanie</a>
                         <a class="dropdown-item" href="/contacts/Cedric">Cédric</a>
                         <a class="dropdown-item" href="/contacts/Eric">Eric</a>
                     </div>
