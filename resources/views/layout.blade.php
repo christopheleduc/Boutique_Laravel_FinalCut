@@ -14,9 +14,9 @@
                 <a href="/home" class="btn btn-secondary my-2">Créer un compte / s'identifier</a>
             </p>
 
-            <p>
+            {{-- <p>
                 <h2>@yield('MetaTitle')</h2>
-            </p>
+            </p> --}}
         </div>
     </section>
 
@@ -41,7 +41,7 @@
             @endif --}}
     {{-- </div> --}}
 
-    <div class="album py-5 bg-light">
+    {{-- <div class="album py-5 bg-light">
         <div class="container">
                 @yield('contactTitle', '')
             <div class="row">
@@ -51,7 +51,8 @@
         @yield('contact')
         @yield('apropos')
         @yield('petitforeach')
-    </div>
+    </div> --}}
+    @yield('carousel')
 
 </main>
 

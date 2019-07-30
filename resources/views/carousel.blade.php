@@ -11,21 +11,21 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="{{ asset('images/carousel/Terre_Lune_Soleil_2M.jpg')}}" class="d-block w-100" alt="...">
+              <img src="..." class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="{{ asset('images/carousel/Ile_003.jpg')}}" class="d-block w-100" alt="...">
+              <img src="..." class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="{{ asset('images/carousel/TerreLune_Test_01.jpg')}}" class="d-block w-100" alt="...">
+              <img src="..." class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -44,6 +44,3 @@
       </div>
 
 @endsection
-
-
-
