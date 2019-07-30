@@ -16,13 +16,13 @@ class PageController extends Controller
         return view('welcome', ['Products' => $Products]);
     }
 
-    public function contact($contact)
+    public function contact(Contacts $contact)
     {
         //global $board;
         //dd($contact);
-        $contacts = Contacts::wherefirstname($contact)->get();
-        //dd($contacts);
-        return view('contacts.contact', ['contact' => $contacts]);
+        //$contacts = Contacts::wherefirstname($contact)->get();
+        //dd($contact);
+        return view('contacts.contact', ['contact' => $contact]);
         // $contacts = Contacts::all();
         // return view("contacts.contact", [
         //     'contacts' => $contacts,

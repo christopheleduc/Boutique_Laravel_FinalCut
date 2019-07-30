@@ -32,11 +32,11 @@
                     <p class="card-text">{{ $contact['name'] }}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <a href="{{ $contact['link'] }}" class="btn btn-sm btn-outline-secondary">Profil</a>
+                            <a href="/contacts/{{ $contact['firstName'] }}" class="btn btn-sm btn-outline-secondary">Profil</a>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Contact</button>
                         </div>
                         {{-- <small class="text-muted">{{ $id }} €</small> --}}
-                        <small class="text-muted">{{ 'Serial Hacker' }}</small>
+                        <small class="text-muted">{{ $contact['fonction'] }}</small>
                     </div>
                 </div>
             </div>

@@ -19,6 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('lastName');
             $table->string('image');
             $table->string('linkedin')->unique();
+            $table->string('fonction');
             $table->string('description');
             $table->timestamps();
         });
