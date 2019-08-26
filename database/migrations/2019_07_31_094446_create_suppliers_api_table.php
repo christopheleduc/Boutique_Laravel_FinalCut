@@ -16,10 +16,10 @@ class CreateSuppliersApiTable extends Migration
         Schema::create('suppliers_api', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->string('name');
-            $table->dateTimeTz('checkedAt');
+            $table->dateTimeTz('checkedAt')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->boolean('status');
-            $table->float('latitude', 4, 4);
-            $table->float('longitude', 4, 4);
+            $table->float('latitude', 9, 4);
+            $table->float('longitude', 9, 4);
             $table->timestampsTz();
         });
     }
