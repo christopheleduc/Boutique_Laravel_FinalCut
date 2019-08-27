@@ -75,5 +75,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-/* Suppliers API route */
+/* Suppliers API's route */
 Route::get('/suppliers', 'ApiController@suppliers')->name('suppliers');
+Route::get('/suppliers/json', 'ApiController@suppliers_json')->name('suppliers_json');
