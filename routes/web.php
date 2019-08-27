@@ -76,5 +76,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 /* Suppliers API's route */
-Route::get('/suppliers', 'ApiController@suppliers')->name('suppliers');
-Route::get('/suppliers/json', 'ApiController@suppliers_json')->name('suppliers_json');
+Route::middleware(\Barryvdh\Cors\HandleCors::class)->get('/suppliers', 'ApiController@suppliers')->name('suppliers');
+Route::middleware(\Barryvdh\Cors\HandleCors::class)->get('/suppliers/json', 'ApiController@suppliers_json')->name('suppliers_json');

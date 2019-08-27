@@ -8,7 +8,7 @@ class ApiController extends Controller
 {
     public function suppliers()
     {
-        return ApiSupplier::get();
+        return response()->json(ApiSupplier::get());
     }
 
     public function suppliers_json()
@@ -35,7 +35,7 @@ class ApiController extends Controller
             ];
         }
 
-        return $data;
+        return response()->json($data);
     }
 
 }
