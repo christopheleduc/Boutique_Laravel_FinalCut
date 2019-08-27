@@ -20,7 +20,10 @@ class CreateApiSuppliersTable extends Migration
             $table->boolean('status');
             $table->float('latitude', 9, 4);
             $table->float('longitude', 9, 4);
-            $table->timestampsTz();
+            $table->timestampTz('createdAt')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestampTz('updatedAt')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 
