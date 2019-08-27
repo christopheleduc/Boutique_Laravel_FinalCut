@@ -13,7 +13,7 @@ class ApiController extends Controller
 
     public function suppliers_json()
     {
-        $JsonSuppliers = ApiSupplier::get();
+        $JsonSuppliers = ApiSupplier::where('status', 1)->get();
 
         $data = [
             'title' => 'Laravel Suppliers API',
